@@ -10,7 +10,11 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiFillGithub,
+  AiFillMail
 } from "react-icons/ai";
+
+import { FaLinkedinIn } from "react-icons/fa";
 
 import { MdLanguage } from 'react-icons/md';
 
@@ -44,10 +48,17 @@ function NavBar() {
       
         
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mx-auto" defaultActiveKey="#home">
-            <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "3px" }} /> Home
+          <Nav className="mx-auto" defaultActiveKey="#projects">
+          <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/projects"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineFundProjectionScreen
+                  style={{ marginBottom: "3px" }}
+                />{" "}
+                {t('Projects')}
               </Nav.Link>
             </Nav.Item>
 
@@ -60,43 +71,45 @@ function NavBar() {
                 <AiOutlineUser style={{ marginBottom: "3px" }} /> {t('About')}
               </Nav.Link>
             </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/project"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "3px" }}
-                />{" "}
-                {t('Projects')}
-              </Nav.Link>
-            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
 
         { !expand &&  
-        <Row>
-          <Col className="col-sm-4">
-          <BtnToggleTheme/> 
+        <Row className="col-sm-4">
+          <Col>
+            <ul>
+              <li className="social-icons">
+                <a className="footer-social-icons"
+                  href="https://github.com/candynation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillGithub />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a className="footer-social-icons"
+                  href="https://www.linkedin.com/in/kayancandychan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a className="footer-social-icons"
+                  href="mailto:candy.cky@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillMail />
+                </a>
+              </li>
+            </ul>
           </Col>
-          
           <Col className="col-sm-4">
-          <Dropdown 
-            onSelect={e => changeLanguage(e)}
-          >
-            <Dropdown.Toggle id="dropdown-basic">
-              <MdLanguage style={{ fontSize: "26px"}}/> {lang.toUpperCase()}
-            </Dropdown.Toggle>
-          
-            <Dropdown.Menu>
-              <Dropdown.Item eventKey="en">EN</Dropdown.Item>
-              <Dropdown.Item eventKey="it">IT</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown> 
+            <BtnToggleTheme/> 
           </Col>
-
         </Row>       
         }  
         

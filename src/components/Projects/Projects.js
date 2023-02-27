@@ -3,10 +3,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
-import bayesnet from "../../assets/Projects/bayesnet.jpg";
-import quantum from "../../assets/Projects/quantum.png";
-import diffusers from "../../assets/Projects/diffusers2.jpg"
-import portfolio from "../../assets/Projects/portfolio.png";
+import hangman from "../../assets/Projects/hangman.png";
+import riddles from "../../assets/Projects/riddles.png";
+import tictactoe from "../../assets/Projects/tictactoe.png"
+
 import { useTranslation } from "react-i18next";
 
 function Projects() {
@@ -24,42 +24,35 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
         <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={diffusers}
-              title="Diffusers-rs"
+              imgPath={hangman}
+              title="Stickman"
               description={t('Proj1')}
-              link="https://github.com/LaurentMazare/diffusers-rs"
+              link="https://github.com/candynation/hangman"
+              website="http://stickman.candychansgames.com/"
             />
           </Col>
           
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bayesnet}
+              imgPath={tictactoe}
               isBlog={false}
-              title="Baylib"
+              title="Tic Tac Toe"
               description={t('Proj2')}
-              link="https://github.com/mspronesti/baylib"
+              link="https://github.com/candynation/tictactoe"
+              website="http://tic-tac-toe.candychansgames.com/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={quantum}
+              imgPath={riddles}
               isBlog={false}
-              title="Qlearnkit"
+              title="Riddles"
               description={t('Proj3')}
-              link="https://github.com/mspronesti/qlearnkit"
+              link="https://github.com/candynation/riddles"
+              website="http://riddles.candychansgames.com/"
             />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={portfolio}
-              isBlog={false}
-              title={t('ThisWebsite')}
-              description={t('Proj4')}
-              link="https://github.com/mspronesti/mspronesti.github.io"
-            />
-          </Col>         
+          </Col>      
         </Row>
       </Container>
     </Container>

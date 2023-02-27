@@ -490,13 +490,13 @@ button:focus {
 /* --------- */
 .project-section {
   position: relative !important;
-  padding-top: 150px !important;
-  padding-bottom: 30px !important;
+  padding-top: 50px !important;
+  padding-bottom: 10px !important;
 }
 
 .project-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;
@@ -520,6 +520,8 @@ button:focus {
   color: white !important;
   background-color: var(--green-1) !important;
   border-color: var(--green-1) !important;
+  font-size:smaller;
+  margin: 5px;
 }
 
 .btn-primary:hover {
@@ -544,6 +546,10 @@ button:focus {
   border-color: transparent !important;
 }
 
+.project-buttons {
+  width: 100%;
+  justify-content: center;
+}
 
 /* DROPDOWN */
 .dropdown-toggle, .dropdown-toggle:hover {
@@ -578,8 +584,8 @@ button:focus {
 
 .about-section {
   position: relative !important;
-  padding-top: 150px !important;
-  padding-bottom: 30px !important;
+  padding-top: 50px !important;
+  padding-bottom: 5px !important;
   color: var(--text-color) !important;
 }
 

@@ -20,8 +20,8 @@ function About() {
             md={7}
             style={{
               justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
+              paddingTop: "5px",
+              paddingBottom: "5px",
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
@@ -29,28 +29,7 @@ function About() {
             </h1>
             <Aboutcard />
           </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={laptopImg} alt="about" className="img-fluid" />
-          </Col>
         </Row>
-        <h1 className="project-heading">
-           <strong className="green">{t('Languages')} </strong>
-           {t('And')} <strong className="green">{t('Frameworks')} </strong> {t('IUse')}
-           
-        </h1>
-
-        <Techstack />
-
-        <h1 className="project-heading">
-          <strong className="green">Tools</strong> {t('IUse')}
-        </h1>
-        <Toolstack />
-
-        <Github />
       </Container>
     </Container>
   );

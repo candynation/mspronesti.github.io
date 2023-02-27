@@ -1,6 +1,5 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import { Card, Button, ButtonGroup } from "react-bootstrap";
 import { BiLinkExternal } from "react-icons/bi";
 import { useTranslation } from "react-i18next";
 
@@ -9,15 +8,22 @@ function ProjectCards(props) {
   const { t } = useTranslation();
   return (
     <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+      <p><small><blockquote>{t('PlayableGameInfo')}</blockquote></small></p>
+      <iframe title={props.title} style={{width:`100%`, height:750, transform: `scale(0.95)`, transformOrigin: `top center`}}
+              src={props.website} ></iframe>
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Text style={{ textAlign: "justify" }}>
           {props.description}
         </Card.Text>
-        <Button variant="primary" href={props.link} target="_blank">
-          <BiLinkExternal /> &nbsp; {t('View')}
-        </Button>
+        <ButtonGroup className="project-buttons">
+          <Button variant="primary" href={props.link} target="_blank">
+            <BiLinkExternal /> &nbsp; {t('View')}
+          </Button>
+          <Button variant="primary" href={props.website} target="_blank">
+            <BiLinkExternal /> &nbsp; {t('Play Game')}
+          </Button>
+        </ButtonGroup>
       </Card.Body>
     </Card>
   );

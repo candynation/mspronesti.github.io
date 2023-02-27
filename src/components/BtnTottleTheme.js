@@ -8,7 +8,7 @@ const BtnToggleTheme = ({ className }) => {
   const { dark, toggleTheme } = useThemeContext();
 
   const ToggleThemeIcon = useMemo(
-    () => (dark ? FiMoon : BsSun),
+    () => (dark ? BsSun : FiMoon),
     [dark],
   );
 
