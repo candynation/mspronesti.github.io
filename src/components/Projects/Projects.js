@@ -3,10 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
-import hangman from "../../assets/Projects/hangman.png";
-import riddles from "../../assets/Projects/riddles.png";
-import tictactoe from "../../assets/Projects/tictactoe.png"
-
 import { useTranslation } from "react-i18next";
 
 function Projects() {
@@ -24,7 +20,6 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
         <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={hangman}
               title="Stickman"
               description={t('Proj1')}
               link="https://github.com/candynation/hangman"
@@ -34,7 +29,6 @@ function Projects() {
           
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={tictactoe}
               isBlog={false}
               title="Tic Tac Toe"
               description={t('Proj2')}
@@ -45,12 +39,21 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={riddles}
               isBlog={false}
               title="Riddles"
               description={t('Proj3')}
               link="https://github.com/candynation/riddles"
               website="http://riddles.candychansgames.com/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="Jokes"
+              description={t('Proj4')}
+              link="https://github.com/candynation/jokes"
+              website="http://jokes.candychansgames.com/"
             />
           </Col>      
         </Row>

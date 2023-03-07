@@ -24,5 +24,6 @@
     "PlayableGameInfo": "This is a deployed game that can be played in the browser window, or you can follow the link below to the game or source code.",
     "Proj1": "This is a hangman concept game but uses stickman instead to be more child friendly. The game uses react native techology along with typescript. Although I didn't pubish it to the Apple App/Google store, but the app is mobile web friendly.",
     "Proj2": "This is a Tic Tac Toe game that allows player play with friend or computer.  The game uses react native techology along with typescript. Although I didn't pubish it to the Apple App/Google store, but the app is mobile web friendly.",
-    "Proj3": "This is Riddles app to view riddles.  The app uses react native techology along with typescript. Although I didn't pubish it to the Apple App/Google store, but the app is mobile web friendly "
+    "Proj3": "This is Riddles app to view riddles.  The app uses react native techology along with typescript. Although I didn't pubish it to the Apple App/Google store, but the app is mobile web friendly.",
+    "Proj4": "This is Jokes app to view jokes.  This app is built using Python's Flask framework and Bootstrap."
 }
